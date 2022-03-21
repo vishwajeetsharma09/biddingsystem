@@ -1,0 +1,74 @@
+{% extends 'base.html' %} {% block content %} {% include 'nav.html' %} {% load static %}
+
+<section class="section">
+    <section class="container">
+        {% if user.is_authenticated == False %}
+        <div class="card z-depth-2">
+            <div class="card-content">
+                <h5>Notice</h5>
+                <p class="custom-font-1">You must have a registered account and be logged in, in order to view and place bids within our marketplace.</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card z-depth-2">
+            <div class="card-content">
+                
+                <h5>The Marketplace</h5>
+
+                <p class="custom-font-1">The purpose of bidding is for each partnership to ascertain which contract, whether made or defeated and whether bid by them or by their opponents, would give the partnership their best scoring result.</p>
+                <a href="{% url 'app:placements' %}" class="btn waves-effect waves-light pink" style="margin-top: 1rem;">
+                        <i class="material-icons left">store</i>visit marketplace</a>
+                <img class="responsive-img fade-in" src="{% static 'austin-distel-1555609-unsplash.jpg' %}" alt="">
+            </div>
+        </div>
+
+
+        <div class="card z-depth-2">
+            <div class="card-content">
+                <h5>
+                    Requirements
+                </h5>
+                <p class="custom-font-1">Sponsoring organizations can require players at all or some levels of competition to have a convention card which is a form completed by the partnership, containing general notes of the system, together with the definition of conventional bids, leads, discards and signals. In ACBL-sanctioned games, all pairs are obliged to have such a card, which must be identical for both members of the partnership. On the ACBL convention card, alertable conventions are shown in red and announceable ones in blue.</p>
+                <p class="custom-font-1"><br>Sponsoring organizations may also ban the usage of certain conventions or restrict their use to certain levels of competition; examples are the use of "ambiguous" suits to disrupt opponent's bidding</p>
+                <p class="custom-font-1"><br>Although bidding is often "natural" (describing a hand by simple reference to possession, shape, and strength of the named suit), players may also bid using conventions, which assign more specific information to certain calls, particularly at the more advanced levels of competitive play.</p>
+                <img class="responsive-img fade-in" src="{% static 'franck-v-628397-unsplash.jpg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="card z-depth-2">
+            <div class="card-content">
+                <h5>
+                    News (Feb)
+                </h5>
+                <p class="custom-font-1">The government has extended by about a month till February 28 the deadline for prospective buyers of PDIL to submit EoI.
+
+                   
+                    
+                   </p>
+                <p class="custom-font-1"><br> The Department of Investment and Public Asset Management (DIPAM) had on December 14 invited preliminary bids for selling the government's 100 per cent stake in the CPSE which is under the Ministry of Chemicals and Fertilisers.
+                </p>
+                <p class="custom-font-1"><br> Earlier, the last date for submitting expression of interest (EoI) was January 31. In view of the prevailing situation arising out of the COVID-19 pandemi</p>
+                <img class="responsive-img fade-in" src="{% static 'priscilla-du-preez-623040-unsplash.jpg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="card z-depth-2">
+            <div class="card-content">
+                <h5>
+                    
+                </h5>
+                <p class="custom-font-1">
+                    100% SECURED ONLINE AUCTION MARKET
+                    
+                    </p>
+                <p class="custom-font-1"><br>We know that data theft is a big concern these days, and to counter the same we have tried our best for protecting all sorts of personal information included in our database. We use industry-standard encryption and firewall protection so as to safeguard your network from malicious software.</p>
+           
+                <img class="responsive-img fade-in" src="{% static 'lycs-architecture-744230-unsplash.jpg' %}" alt="">
+            </div>
+        </div>
+
+    </section>
+</section>
+
+{% include 'footer.html' %} {% endblock content %}

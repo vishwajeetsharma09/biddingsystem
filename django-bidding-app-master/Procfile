@@ -1,0 +1,1 @@
+web: gunicorn django-bidding-app-master.wsgi
